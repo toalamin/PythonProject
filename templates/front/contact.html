@@ -69,7 +69,7 @@
 
         <div class="row mt-5 justify-content-center" data-aos="fade-up">
           <div class="col-lg-10">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <form action="" method="POST">
               {% csrf_token %}
               
               <div class="form-row">
@@ -95,7 +95,9 @@
                 <div class="error-message"></div>
                 <div class="sent-message">Your message has been sent. Thank you!</div>
               </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
+              <div class="text-center">
+                <button type="submit" class="btn btn-success btn-sm">Send Message</button>
+              </div>
             </form>
           </div>
         </div>
