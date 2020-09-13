@@ -16,9 +16,20 @@
           <li><a href="{% url 'service.page' %}">Services</a></li>
           <li><a href="{% url 'portfolio.page' %}">Portfolio</a></li>
           <li><a href="{% url 'price.page' %}">Pricing</a></li>
-          <li><a href="{% url 'blog.page' %}">Blog</a></li>
+         
           <li><a href="{% url 'contact.page' %}">Contact</a></li>
 
+         {% if user.is_authenticated %}
+         
+         <li class="drop-down"><a href="{% url 'blog.page' %}">Blog</a>
+          <ul>
+            <li><a href="{% url 'logout' %}">Log Out</a></li>
+            
+          </ul>
+        </li>
+          {% else %}
+          <li><a href="{% url 'login.page' %}">Login</a></li>
+          {% endif %}
         </ul>
       </nav><!-- .nav-menu -->
 

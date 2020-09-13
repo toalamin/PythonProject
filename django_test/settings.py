@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'front',
     'contact',
     'service',
+    'authentication',
 ]
 
 MIDDLEWARE = [
